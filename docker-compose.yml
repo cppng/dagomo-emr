@@ -1,0 +1,13 @@
+version: "3.8"
+services:
+  dagomo_emr:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "5002:80"
+    volumes:
+      - ./:/var/www/html
+      - /Users/user/project-mars-frontend-docker-compose
